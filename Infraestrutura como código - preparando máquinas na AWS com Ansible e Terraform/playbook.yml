@@ -7,6 +7,12 @@
         - virtualenv
       update_cache: true
     become: true
+  - name: instalar dependencias com pip
+    pip:
+      virtualenv: /home/ubuntu/venv
+      name: 
+        - django
+        - djangorestframework
   - name: criar arquivo
     copy:
       dest: /home/ubuntu/index.html
