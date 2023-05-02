@@ -13,6 +13,14 @@
       name: 
         - django
         - djangorestframework
+  - name: iniciar o projeto
+    shell: '. /home/ubuntu/venv/bin/activate; django-admin startproject setup /home/ubuntu'
+  - name: alterar as permissoes de hosts do settings do server django
+    lineinfile:
+      path: /home/ubuntu/setup/settings.py
+      regexp: "ALLOWED_HOSTS"
+      line: "ALLOWED_HOSTS = ['*']"
+      backrefs: true
   - name: criar arquivo
     copy:
       dest: /home/ubuntu/index.html
