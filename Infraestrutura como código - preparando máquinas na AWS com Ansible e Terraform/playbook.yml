@@ -1,5 +1,12 @@
 - hosts: terraform-ansible
   tasks:
+  - name: instalar python3 e virtualenv
+    apt:
+      pkg:
+        - python3
+        - virtualenv
+      update_cache: true
+    become: true
   - name: criar arquivo
     copy:
       dest: /home/ubuntu/index.html

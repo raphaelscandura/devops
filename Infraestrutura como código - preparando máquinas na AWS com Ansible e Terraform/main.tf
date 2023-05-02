@@ -18,6 +18,6 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
   key_name = "MyInstance1"
   tags = {
-    Name = "MyFirstInstance - creating files with terraform"
+    Name = "MyFirstInstance - Terraform, Ansible and Python3"
   }
 }
