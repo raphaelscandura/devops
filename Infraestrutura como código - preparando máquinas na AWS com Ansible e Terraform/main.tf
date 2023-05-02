@@ -17,12 +17,6 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0a695f0d95cefc163"
   instance_type = "t2.micro"
   key_name = "MyInstance1"
-  user_data = <<-EOF
-                #!/bin/bash
-                cd /home/ubuntu
-                echo "<h1>Criando arquivos na VM com Terraform" > index.html
-                nohup busybox httpd -f -p 8080 &
-                EOF
   tags = {
     Name = "MyFirstInstance - creating files with terraform"
   }
