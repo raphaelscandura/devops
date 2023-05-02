@@ -1,2 +1,4 @@
-MyFirstInstance.pem
 .terraform
+*.pem
+*.tfstate
+*.tfstate.*
